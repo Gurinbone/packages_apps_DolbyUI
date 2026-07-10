@@ -15,7 +15,6 @@ android_app {
     platform_apis: true,
     system_ext_specific: true,
     privileged: true,
-    privapp_allowlist: "privapp-permissions-dolby.xml",
 
     overrides: ["MusicFX", "AudioFX"],
     static_libs: [
@@ -35,7 +34,14 @@ android_app {
         "kotlinx-coroutines-core",
     ],
 
-    required: ["preinstalled-packages-platform-dolby.xml"],
+    required: [
+        "preinstalled-packages-platform-dolby.xml",
+        "privapp-permissions-dolby.xml",
+    ],
+
+    optimize: {
+        enabled: true,
+    },
 }
 
 prebuilt_etc {
@@ -45,3 +51,9 @@ prebuilt_etc {
     system_ext_specific: true,
 }
 
+prebuilt_etc {
+    name: "privapp-permissions-dolby.xml",
+    src: "privapp-permissions-dolby.xml",
+    sub_dir: "permissions",
+    system_ext_specific: true,
+}
