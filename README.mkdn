@@ -14,4 +14,5 @@ example :- https://github.com/Spanish-or-Vanish/android_device_xiaomi_sm8350-com
 
 # Credits:
  * [**LunarisDolby Manager**](https://github.com/Pong-Development/hardware_dolby)
+ * [**LunarisDolby Manager**](https://github.com/swiitch-OFF-Lab/packages_apps_DolbyUI)
 
